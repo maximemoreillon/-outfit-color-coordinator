@@ -20,3 +20,4 @@ export const shouldersWidth = 440
 export const bustWidth = 360
 export const handsSpacing = 500
 export const neckWidth = 150
+export const wristsWidth = 100

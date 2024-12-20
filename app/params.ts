@@ -5,11 +5,12 @@ export const svgHeight = 2000
 export const svgHorizontalMidpoint = 0.5 * svgWidth
 
 // Vertical
-export const shouldersY = svgHeight - 1520
+export const shouldersY = svgHeight - 1510
 export const waistY = svgHeight - 1130
 export const hipY = svgHeight - 1000
 export const ankleY = svgHeight - 100
 export const armpitsHeight = svgHeight - 1350
+export const neckBaseY = svgHeight - 1520
 
 // Horizontal
 export const ankleSpacing = 200

@@ -14,6 +14,7 @@ import {
   shouldersWidth,
   waistY,
   neckWidth,
+  neckBaseY,
 } from "@/app/params"
 import { Point, horizontalSymmetry, pointsToD } from "../svgUtils"
 import { CSSProperties } from "react"
@@ -30,7 +31,7 @@ export default function Blazer(props: Props) {
     [svgHorizontalMidpoint - 0.5 * handsSpacing + 50, hipY + 200],
     [svgHorizontalMidpoint - 0.5 * handsSpacing - 50, hipY + 200],
     [svgHorizontalMidpoint - 0.5 * shouldersWidth - 50, shouldersY],
-    [svgHorizontalMidpoint - 0.5 * neckWidth, shouldersY],
+    [svgHorizontalMidpoint - 0.5 * neckWidth, neckBaseY],
     [svgHorizontalMidpoint, waistY],
   ])
 

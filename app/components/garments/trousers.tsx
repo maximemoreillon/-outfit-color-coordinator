@@ -7,7 +7,7 @@ import {
   ankleY,
   waistWidth,
 } from "@/app/params"
-import { Point, horizontalSymmetry, pointsToD } from "../svgUtils"
+import { Point, horizontalSymmetry, pointsToD } from "@/app/svgUtils"
 import { CSSProperties } from "react"
 
 type Props = {

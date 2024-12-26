@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react"
 
 type GarmentStateProperties = {
-  show: Boolean
+  show: boolean
   color: string
 }
 
@@ -24,7 +24,7 @@ export default function GarmentControls(props: Props) {
           })
         }
       >
-        Trousers
+        {props.label}
       </button>
       <input
         type="color"

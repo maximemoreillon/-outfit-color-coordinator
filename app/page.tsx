@@ -4,7 +4,7 @@ import Blazer from "./components/garments/blazer"
 import DressShirt from "./components/garments/dressShirt"
 import Trousers from "./components/garments/trousers"
 import { svgHeight, svgWidth } from "./params"
-
+import GarmentControls from "./components/garmentControls"
 export default function Home() {
   const [trousers, setTrousers] = useState({ show: true, color: "#c00000" })
   const [dressShirt, setDressShirt] = useState({ show: true, color: "#00c000" })
@@ -25,48 +25,15 @@ export default function Home() {
           {blazer.show && <Blazer style={{ fill: blazer.color }} />}
         </svg>
         <div className="flex flex-col gap-2 items-start p-2">
-          <div>
-            <button
-              onClick={() => setTrousers({ ...trousers, show: !trousers.show })}
-            >
-              Trousers
-            </button>
-            <input
-              type="color"
-              value={trousers.color}
-              onChange={(e) =>
-                setTrousers({ ...trousers, color: e.target.value })
-              }
-            />
-          </div>
-          <div>
-            <button
-              onClick={() => setBlazer({ ...blazer, show: !blazer.show })}
-            >
-              Blazer
-            </button>
-            <input
-              type="color"
-              value={blazer.color}
-              onChange={(e) => setBlazer({ ...blazer, color: e.target.value })}
-            />
-          </div>
-          <div>
-            <button
-              onClick={() =>
-                setDressShirt({ ...dressShirt, show: !dressShirt.show })
-              }
-            >
-              Dress shirt
-            </button>
-            <input
-              type="color"
-              value={dressShirt.color}
-              onChange={(e) =>
-                setDressShirt({ ...dressShirt, color: e.target.value })
-              }
-            />
-          </div>
+          <GarmentControls
+            label="Trousers"
+            garmentState={[trousers, setTrousers]}
+          />
+          <GarmentControls label="Blazer" garmentState={[blazer, setBlazer]} />
+          <GarmentControls
+            label="Dress shirt"
+            garmentState={[dressShirt, setDressShirt]}
+          />
         </div>
       </div>
     </main>

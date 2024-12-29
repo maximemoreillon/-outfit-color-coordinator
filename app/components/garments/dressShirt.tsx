@@ -24,7 +24,7 @@ type Props = {
 }
 
 export default function DressShirt(props: Props) {
-  const trousersPoints: Point[] = horizontalSymmetry([
+  const points: Point[] = horizontalSymmetry([
     [svgHorizontalMidpoint - 0.5 * hipWidth, hipY + 150],
     [svgHorizontalMidpoint - 0.5 * waistWidth, waistY],
     [svgHorizontalMidpoint - 0.5 * bustWidth, armpitsHeight],
@@ -37,7 +37,7 @@ export default function DressShirt(props: Props) {
     // [svgHorizontalMidpoint, shouldersY + 30],
   ])
 
-  const trousersD = pointsToD(trousersPoints)
+  const trousersD = pointsToD(points)
 
   return <path d={trousersD} style={props.style} />
 }

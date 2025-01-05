@@ -23,13 +23,13 @@ type Props = {
   style?: CSSProperties
 }
 
-export default function Blazer(props: Props) {
+export default function (props: Props) {
   const trousersPoints: Point[] = horizontalSymmetry([
     [svgHorizontalMidpoint - 0.5 * hipWidth, hipY + 150],
     [svgHorizontalMidpoint - 0.5 * waistWidth, waistY],
     [svgHorizontalMidpoint - 0.5 * bustWidth, armpitsHeight],
-    [svgHorizontalMidpoint - 0.5 * handsSpacing + 50, hipY + 200],
-    [svgHorizontalMidpoint - 0.5 * handsSpacing - 50, hipY + 200],
+    [svgHorizontalMidpoint - 0.5 * handsSpacing + 50, hipY + 190],
+    [svgHorizontalMidpoint - 0.5 * handsSpacing - 50, hipY + 190],
     [svgHorizontalMidpoint - 0.5 * shouldersWidth - 50, shouldersY],
     [svgHorizontalMidpoint - 0.5 * neckWidth, neckBaseY],
     [svgHorizontalMidpoint, waistY],

@@ -23,7 +23,7 @@ type Props = {
   style?: CSSProperties
 }
 
-export default function DressShirt(props: Props) {
+export default function (props: Props) {
   const points: Point[] = horizontalSymmetry([
     [svgHorizontalMidpoint - 0.5 * hipWidth, hipY + 150],
     [svgHorizontalMidpoint - 0.5 * waistWidth, waistY],

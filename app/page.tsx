@@ -15,10 +15,10 @@ type GarmentListItem = {
 export default function Home() {
   const [garments, setGarments] = useState<GarmentListItem[]>([])
 
-  const [trousers, setTrousers] = useState({ show: true, color: "#c00000" })
-  const [dressShirt, setDressShirt] = useState({ show: true, color: "#00c000" })
-  const [blazer, setBlazer] = useState({ show: true, color: "#0000c0" })
-  const [necktie, setNecktie] = useState({ show: true, color: "#666666" })
+  const [trousers, setTrousers] = useState({ show: true, color: "#444444" })
+  const [dressShirt, setDressShirt] = useState({ show: true, color: "#ffffff" })
+  const [blazer, setBlazer] = useState({ show: true, color: "#000099" })
+  const [necktie, setNecktie] = useState({ show: true, color: "#990000" })
 
   function addGarment() {
     setGarments([
@@ -32,34 +32,39 @@ export default function Home() {
 
   return (
     <main className="">
-      <h1>Outfit color coordinator</h1>
+      <h1 className="text-3xl my-4">Outfit color coordinator</h1>
       {/* TODO: use % ? */}
       <div className="flex">
         <svg
-          width={svgWidth}
-          height={svgHeight}
-          className="border-red-600 border-2"
+          viewBox={`0 0 ${svgWidth} ${svgHeight}`}
+          className="border-white border-2 rounded-xl h-screen "
         >
           {trousers.show && <Trousers style={{ fill: trousers.color }} />}
           {dressShirt.show && <DressShirt style={{ fill: dressShirt.color }} />}
           {necktie.show && <Necktie style={{ fill: necktie.color }} />}
           {blazer.show && <Blazer style={{ fill: blazer.color }} />}
         </svg>
-        <div className="flex flex-col gap-2 items-start p-2">
-          <button onClick={() => addGarment()}>Add garment</button>
-          <GarmentControls
-            label="Trousers"
-            garmentState={[trousers, setTrousers]}
-          />
-          <GarmentControls label="Blazer" garmentState={[blazer, setBlazer]} />
-          <GarmentControls
-            label="Dress shirt"
-            garmentState={[dressShirt, setDressShirt]}
-          />
-          <GarmentControls
-            label="Necktie"
-            garmentState={[necktie, setNecktie]}
-          />
+        <div className="">
+          <table className=" ">
+            <tbody>
+              <GarmentControls
+                label="Trousers"
+                garmentState={[trousers, setTrousers]}
+              />
+              <GarmentControls
+                label="Blazer"
+                garmentState={[blazer, setBlazer]}
+              />
+              <GarmentControls
+                label="Dress shirt"
+                garmentState={[dressShirt, setDressShirt]}
+              />
+              <GarmentControls
+                label="Necktie"
+                garmentState={[necktie, setNecktie]}
+              />
+            </tbody>
+          </table>
         </div>
       </div>
     </main>

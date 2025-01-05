@@ -23,7 +23,7 @@ type Props = {
   style?: CSSProperties
 }
 
-export default function Necktie(props: Props) {
+export default function (props: Props) {
   const points: Point[] = horizontalSymmetry([
     [svgHorizontalMidpoint, waistY],
     [svgHorizontalMidpoint - 20, waistY - 50],

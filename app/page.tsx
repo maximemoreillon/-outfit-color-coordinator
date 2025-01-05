@@ -1,5 +1,5 @@
 "use client"
-import { Component, useState } from "react"
+import { useState } from "react"
 import Blazer from "./components/garments/blazer"
 import DressShirt from "./components/garments/dressShirt"
 import Trousers from "./components/garments/trousers"
@@ -7,28 +7,11 @@ import { svgHeight, svgWidth } from "./params"
 import GarmentControls from "./components/garmentControls"
 import Necktie from "./components/garments/necktie"
 
-type GarmentListItem = {
-  type: string
-  color: string
-}
-
 export default function Home() {
-  const [garments, setGarments] = useState<GarmentListItem[]>([])
-
   const [trousers, setTrousers] = useState({ show: true, color: "#444444" })
   const [dressShirt, setDressShirt] = useState({ show: true, color: "#ffffff" })
   const [blazer, setBlazer] = useState({ show: true, color: "#000099" })
   const [necktie, setNecktie] = useState({ show: true, color: "#990000" })
-
-  function addGarment() {
-    setGarments([
-      ...garments,
-      {
-        type: "trousers",
-        color: "#c00000",
-      },
-    ])
-  }
 
   return (
     <main className="">
